@@ -1,0 +1,8 @@
+test loss: 0.07783618569374084, test metrics: {'mae': 0.22456764, 'mse': 0.08011495, 'rmse': 0.28304586, 'r2': 0.588018899750498} on best_epoch_29_vanilla_videomae_echonet_dynamic_edv_regression
+
+initial_lr: ?
+batch_size: ?
+mixed_precision: bf16
+num_epochs: 50
+
+num_gpus: 2 A100 80G

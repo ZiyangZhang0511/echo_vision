@@ -1,0 +1,7 @@
+test loss: 0.4202533474674931, test metrics: {'accuracy': 0.8260869565217391, 'f1_score': 0.8770581778265643, 'auc': 0.8460241326063487} on best_epoch_13_vanilla_videomae_echonet_dynamic_ef_classification
+
+initial_lr: 1e-5
+batch_size: 32
+mixed_precision: bf16
+
+num_gpus: 1 A100 40G

@@ -1,0 +1,8 @@
+test loss: 0.2244587764143944, test metrics: {'mae': 0.37080222, 'mse': 0.2232602, 'rmse': 0.47250417, 'r2': 0.4065973444873402} on best_epoch_36_vivit_echonet_dynamic_esv_regression
+
+initial_lr: 5e-4
+batch_size: 16
+mixed_precision: bf16
+num_epochs: 50
+
+num_gpus: 2 A100 80G

@@ -1,0 +1,1 @@
+save model checkpoints of pre-trained echo-video-mae

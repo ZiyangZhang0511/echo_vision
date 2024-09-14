@@ -1,0 +1,7 @@
+test loss: 0.5106971870969844, test metrics: {'accuracy': 0.7616459627329193, 'f1_score': 0.8343227199136536, 'auc': 0.780450675740308} on best_epoch_16_vivit_echonet_dynamic_ef_classification
+
+initial_lr: 1e-5
+batch_size: 8 (because vivit consume cuda memory acutely)
+mixed_precision: bf16
+
+num_gpus: 1 A100 40G

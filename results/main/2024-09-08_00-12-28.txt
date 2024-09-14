@@ -1,0 +1,1 @@
+test loss: 0.427534720833306, test metrics: {'accuracy': 0.8175465838509317, 'f1_score': 0.8754636989931107, 'auc': 0.8434400579401194} on best_epoch_5_echo_videomae_echonet_dynamic_ef_classification_stffTrue

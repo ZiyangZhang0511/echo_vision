@@ -1,0 +1,1 @@
+test loss: 0.36527575129344136, test metrics: {'accuracy': 0.8478260869565217, 'f1_score': 0.9075471698113208, 'auc': 0.8605283484176218} on best_epoch_10_vivit_echonet_dynamic_ef_classification

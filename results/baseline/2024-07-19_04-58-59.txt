@@ -1,0 +1,8 @@
+test loss: 0.09528240295393128, test metrics: {'mae': 0.24573348, 'mse': 0.106647454, 'rmse': 0.32656923, 'r2': 0.7165420274462116} on best_epoch_43_videoresnet_echonet_dynamic_esv_regression
+
+initial_lr: 5e-4
+batch_size: 64
+mixed_precision: bf16
+num_epochs: 50
+
+num_gpus: 2 A100 80G

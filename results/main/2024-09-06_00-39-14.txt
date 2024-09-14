@@ -1,0 +1,1 @@
+test loss: 0.1072346643916224, test metrics: {'mae': 0.25697383, 'mse': 0.10723467, 'rmse': 0.32746705, 'r2': 0.7140397525758939} on best_epoch_10_echo_videomae_echonet_dynamic_esv_regression
