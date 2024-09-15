@@ -11,20 +11,25 @@ from accelerate import Accelerator
 def get_videomae_for_pretraining():
     configuration = VideoMAEConfig()
     configuration.image_size = 224
-    model = VideoMAEForPreTraining.from_pretrained("MCG-NJU/videomae-base", config=configuration)
+    model = VideoMAEForPreTraining.from_pretrained(
+        "MCG-NJU/videomae-base",
+        config=configuration
+    )
     return model
 
-def get_echo_encoder(pretrained_checkpiont_path:str):
-    
+def get_echo_encoder(pretrained_checkpiont_path=None):
+
     accelerator = Accelerator()
     configuration = VideoMAEConfig()
     model = VideoMAEForPreTraining.from_pretrained(
         "MCG-NJU/videomae-base",
         config=configuration,
-        )
-    model = accelerator.prepare(model)
-    accelerator.load_state(pretrained_checkpiont_path)
-    
+    )
+
+    if pretrained_checkpiont_path:
+        model = accelerator.prepare(model)
+        accelerator.load_state(pretrained_checkpiont_path)
+
     echo_encoder = model.videomae
 
     return echo_encoder

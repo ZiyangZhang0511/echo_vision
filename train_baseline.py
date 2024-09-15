@@ -83,7 +83,7 @@ def train_function(model, train_dataloader, val_dataloader, test_dataloader, arg
         warmup_epochs=10, 
         max_epochs=args.num_epochs, 
         warmup_start_lr=1e-5, 
-        eta_min=1e-7,
+        eta_min=1e-8,
     )
 
     accelerator = Accelerator(mixed_precision=args.mixed_precision)
@@ -120,8 +120,8 @@ def train_function(model, train_dataloader, val_dataloader, test_dataloader, arg
 
         scheduler.step()
 
-        epoch_logits = torch.cat(epoch_logits).cpu()
-        epoch_targets = torch.cat(epoch_targets).cpu()
+        epoch_logits = torch.cat(epoch_logits).detach().cpu()
+        epoch_targets = torch.cat(epoch_targets).detach().cpu()
 
         train_metrics_dict = utils.compute_metrics(epoch_logits, epoch_targets, args.task_type)
         accelerator.print(f"Epoch {epoch}, current lr: {scheduler.get_last_lr()}, train loss: {epoch_loss}, train metrics: {train_metrics_dict}")

@@ -13,7 +13,7 @@ from .stff_net import SpatioTemporalFeatureFusionNet
 
 class VideoBinaryClassifier(nn.Module):
 
-    def __init__(self, feat_extractor:str, pretrained_checkpiont_path:str=None, stff_net_flag:bool=False):
+    def __init__(self, feat_extractor:str, pretrained_checkpiont_path=None, stff_net_flag:bool=False):
         super(VideoBinaryClassifier, self).__init__()
         self._feat_extractor = feat_extractor
         self._stff_net_flag = stff_net_flag

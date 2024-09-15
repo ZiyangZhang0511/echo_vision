@@ -23,8 +23,9 @@ from modeling.classifier import VideoBinaryClassifier
 from modeling.regressor import VideoRegressor
 
 
-DATAPATH_DICT = {"echonet_dynamic": Path("/projects/p32335/Research_on_AI_medicine/EchoGPT/VideoEncoder/Data/EchoNet-Dynamic"),
-                 "camus": Path("/projects/p32335/Research_on_AI_medicine/EchoGPT/VideoEncoder/Data/CAMUS"),
+DATAPATH_DICT = {
+    "echonet_dynamic": Path("/projects/p32335/Research_on_AI_medicine/EchoGPT/VideoEncoder/Data/EchoNet-Dynamic"),
+    "camus": Path("/projects/p32335/Research_on_AI_medicine/EchoGPT/VideoEncoder/Data/CAMUS"),
 }
 
 CHECKPOINTS_DIR = "./checkpoints/checkpoints_main/"
