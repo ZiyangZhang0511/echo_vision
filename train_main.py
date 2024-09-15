@@ -164,11 +164,11 @@ def main():
     if args.dataset_name == "echonet_dynamic":
         train_dataset = EchonetDynamicDataset(DATAPATH_DICT[args.dataset_name], mode="train", task=args.task_type)
         val_dataset = EchonetDynamicDataset(DATAPATH_DICT[args.dataset_name], mode="val", task=args.task_type)
-        test_dataset = EchonetDynamicDataset(DATAPATH_DICT[args.dataset_name], mode="val", task=args.task_type)
+        test_dataset = EchonetDynamicDataset(DATAPATH_DICT[args.dataset_name], mode="test", task=args.task_type)
     elif args.dataset_name == "camus":
         train_dataset = CamusDataset(DATAPATH_DICT[args.dataset_name], mode="train", task=args.task_type)
         val_dataset = CamusDataset(DATAPATH_DICT[args.dataset_name], mode="val", task=args.task_type)
-        test_dataset = CamusDataset(DATAPATH_DICT[args.dataset_name], mode="val", task=args.task_type)
+        test_dataset = CamusDataset(DATAPATH_DICT[args.dataset_name], mode="test", task=args.task_type)
 
     train_dataloader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, drop_last=True, num_workers=args.num_workers)
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=False, drop_last=False, num_workers=args.num_workers)

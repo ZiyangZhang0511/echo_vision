@@ -10,6 +10,7 @@ from pathlib import Path
 
 
 class EchonetDynamicDataset(Dataset):
+    
     def __init__(self, data_dir, frames_count:int=16, mode:str="train", task:str="ef_classification"):
         
         self._data_dir = data_dir
@@ -33,6 +34,7 @@ class EchonetDynamicDataset(Dataset):
                 v2.Resize(size=(224, 224)),
                 v2.ToDtype(torch.float32, scale=True),
             ])
+
     def __getitem__(self, idx):
 
         video_filepath = self.filespath[idx]
